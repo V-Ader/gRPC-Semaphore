@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package semaphore;
+
+option go_package = "/";
+
+service SemaphoreService {
+  rpc Increase (IncreaseRequest) returns (SemaphoreResponse);
+  rpc Decrease (DecreaseRequest) returns (SemaphoreResponse);
+}
+
+message IncreaseRequest {
+  int32 value = 1;
+}
+
+message DecreaseRequest {
+  int32 value = 1;
+}
+
+message SemaphoreResponse {
+  bool success = 1;
+  string message = 2;
+}
