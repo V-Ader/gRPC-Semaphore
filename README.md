@@ -19,8 +19,6 @@ This project implements a gRPC-based semaphore service in Go. The semaphore serv
 │ ├── semaphore.go
 │ ├── semaphore_server.go
 │ └── semaphore_server_test.go
-├── test/it
-│ └── semaphore_integration_test.go
 ├── go.mod
 └── go.sum
 ```
